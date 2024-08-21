@@ -18,7 +18,7 @@ function Navbar() {
             <Link className='roberto text-base font-bold hover:opacity-40 cursor-pointer' to='/'>Home</Link>
             <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/blog'>Blog</Link>
             <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/blog'>Phd/Interns</Link>
-            <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/blog'>Publishment</Link>
+            <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/blog'>Publishments</Link>
             <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/blog'>Contact us</Link>
             <Link className='roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer' to='/about'>About Me</Link>
 
