@@ -2,7 +2,7 @@ import React from 'react';
 function About() {
   return (
     <>
-      <div>
+      <div className='h-screen w-full pl-40 pr-40'>
         <br/>
         <h1>About</h1>
         <p>This is the about page</p>
