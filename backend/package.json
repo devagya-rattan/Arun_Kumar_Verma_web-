@@ -1,5 +1,5 @@
 {
-  "type":"module",
+  "type": "module",
   "name": "backend",
   "version": "1.0.0",
   "description": "A portfolio website",
@@ -16,5 +16,11 @@
     "IIT-Website"
   ],
   "author": "Trikor Technologia",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3"
+  }
 }
