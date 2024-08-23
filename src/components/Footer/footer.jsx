@@ -27,7 +27,7 @@ function Footer() {
           <div className='linegrey w-full flex-col bg-gray-500'></div>
 
           {/* column 3 */}
-          <div className="flex flex-col flix-400 text-white w-full heightc3 justify-between items-center md:items-start sm:items-start">
+          <div className="flex  flix-400 text-white w-full heightc3 justify-between items-center md:items-start sm:items-start">
             <div className=" heightc3  w-3/6 list-form  flex flex-col justify-start">
               <div className='space-x-containera   '>
                 <Link className='roberto fonttt-size font-normal hover:opacity-40 cursor-pointer texting' to='/'>Home</Link>
