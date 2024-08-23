@@ -19,9 +19,5 @@ export const User = sequelize.define(
       allowNull: false,
     },
   },
-  {
-    // Other model options go here
-  }
+  {}
 );
-
-// module.exports = User; // If you need compatibility with CommonJS

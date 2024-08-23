@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+
+
+import { useNavigate } from "react-router-dom";
+
 function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const postForm = (e) => {
     e.preventDefault();
     axios
@@ -13,12 +18,19 @@ function Registration() {
         password,
       })
       .then((response) => {
+        if (response.data.message === "The user already exists") {
+          alert("User already registered please login");
+          // navigate("/login");
+        } else {
+          alert("Successful registration!");
+        }
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
       });
-    // toast.success("Successful registration!");
+
+ 
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -39,7 +51,7 @@ function Registration() {
               onChange={(e) => setName(e.target.value)}
               type="text"
               id="name"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Enter your name"
             />
           </div>
@@ -55,7 +67,7 @@ function Registration() {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               id="email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Enter your email"
             />
           </div>
@@ -71,7 +83,7 @@ function Registration() {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               id="password"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Enter your password"
             />
           </div>
@@ -84,7 +96,7 @@ function Registration() {
           </button>
         </form>
       </div>
-     
+
     </div>
   );
 }
