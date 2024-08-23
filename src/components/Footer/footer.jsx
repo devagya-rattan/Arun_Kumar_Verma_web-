@@ -9,17 +9,17 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-      <div className='footer  bg-black w-full  '>
-        <div className='w-full pl-40  pt-2 pr-40  flex flex-col'>
+      <div className='footer   bg-black w-full  '>
+        <div className='w-full sm:w-full  sm:pl-1 sm:pr-1 md:pl-5 md:pr-5 lg:pl-40  pt-2 lg:pr-40  flex flex-col'>
 
           {/* column 1 */}
-          <div className='pb-6 pt-7 flex flex-row  h-32 justify-between items-center text-white'>
-            <div className='texting text-lg flex-col'><h3>Arun Kumar Verma <br />Assosiate Professor <br />Department of Electrical Engineering </h3></div>
-            <div className='flex flex-row space-x-7'>
-              <a href=""><FaLinkedinIn className='h-24 w-6 text-white hover:opacity-40' /></a>
-              <a href=""><BiLogoGmail className='h-24 w-6 hover:opacity-40' /></a>
-              <a href=""><RiFacebookFill className='h-24 w-6 text-white hover:opacity-40' /></a>
-              <a href=""><FaTwitter className='h-24 w-6 text-white hover:opacity-40' /></a>
+          <div className='pb-6 pt-7 md:pl-4 paddding md:pr-4 sm:pl-4 sm:pr-4  flex flex-row  h-32 justify-between items-center text-white'>
+            <div className='texting  flex-col fonttt-size'><h3>Arun Kumar Verma <br />Assosiate Professor <br />Department of Electrical Engineering </h3></div>
+            <div className='flex flex-row spaceee space-x-7  '>
+              <a href=""><FaLinkedinIn className=' hieght-width text-white hover:opacity-40' /></a>
+              <a href=""><BiLogoGmail className=' hieght-width hover:opacity-40' /></a>
+              <a href=""><RiFacebookFill className='h-24 w-6 hieght-width text-white hover:opacity-40' /></a>
+              <a href=""><FaTwitter className='h-24 w-6 hieght-width text-white hover:opacity-40' /></a>
             </div>
           </div>
 
@@ -27,55 +27,66 @@ function Footer() {
           <div className='linegrey w-full flex-col bg-gray-500'></div>
 
           {/* column 3 */}
-          <div className="text-white w-full h-72 flex justify-between items-center">
-            <div className="pt-10 h-72 w-3/6 pl-14 pr-20 flex flex-col justify-start">
-              <div className='space-x-32  pb-7  '>
-                <Link className='roberto text-base font-normal hover:opacity-40 cursor-pointer texting' to='/'>Home</Link>
-                <Link className='roberto text-base pl-2 font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Blog</Link>
-                <Link className='roberto text-base pl-1 font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Phd/Interns</Link>
+          <div className="flex flex-col flix-400 text-white w-full heightc3 justify-between items-center md:items-start sm:items-start">
+            <div className=" heightc3  w-3/6 list-form  flex flex-col justify-start">
+              <div className='space-x-containera   '>
+                <Link className='roberto fonttt-size font-normal hover:opacity-40 cursor-pointer texting' to='/'>Home</Link>
+                <Link className='roberto fonttt-size    font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Blog</Link>
+                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Phd</Link>
                
               </div>
-              <div className='space-x-24  pb-7   pt-7  '>
-              <Link className='roberto text-base  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Publications</Link>
-                <Link className='roberto text-base  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Contact us</Link>
-                <Link className='roberto text-base  font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About Me</Link>
+              <div className='space-x-containerb   lg:pt-7 md:pt-5  '>
+              <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Publications</Link>
+                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Contact</Link>
+                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About</Link>
               
 
               </div>
-              <div className='space-x-24  pb-7  pt-7 '>
-                <Link className='roberto text-base  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Events</Link>
-                <Link className='roberto text-base pl-8 font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About Me</Link>
-                <Link className='roberto text-base pl-1 font-normal hover:opacity-40 cursor-pointer texting ' to='/blog'>Google Scholor</Link>
+              <div className='space-x-containerc    lg:pt-7 md:pt-5 '>
+              <Link className='roberto fonttt-size padding-c31 font-normal hover:opacity-40 cursor-pointer texting ' to='/blog'>Google Scholor</Link>
+              <Link className='roberto fonttt-size padding-c32  font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About</Link>
+             
+                <Link className='roberto fonttt-size padding-c33 font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Events</Link>
+                
+                
 
               </div>
 
             </div>
-            <div className="h-full border-l border-gray-400"></div>
-            <div className="pt-7 h-72 pr-20 w-3/6 pl-14 flex flex-col justify-start">
-              <div><p className='texting font-normal text-md pb-4'>If You have any Queries feel free to Ask Here</p></div>
-              <div className='flex flex-col pb-2 '><input type='text' placeholder='First Name' className='texting w-full text-base bg-black text-gray-500' />
+
+            {/* when full screen */}
+            <div className="lg:h-full lg:border-l lg:border-gray-400"></div>
+
+            {/* when responsive */}
+            <div className='block lg:hidden linegrey w-full flex-col bg-gray-500'></div>
+
+            <div className=" heightc3 w-3/6   query-form flex flex-col justify-start   ">
+              <div><p className='texting font-normal fonttt-size pb-4'>If You have any Queries feel free to Ask Here</p></div>
+              <div className='flex flex-col pb-2 '><input type='text' placeholder='First Name' className='texting w-full fonttt-size bg-black text-gray-500' />
                 <div className='lineone bg-gray-500'></div>
               </div>
 
-              <div className='flex flex-col pb-2'><input type='text' placeholder='Last Name' className='w-full texting text-base bg-black text-gray-500' />
+              <div className='flex flex-col pb-2'><input type='text' placeholder='Last Name' className='w-full texting fonttt-size bg-black text-gray-500' />
                 <div className='lineone bg-gray-500'></div>
               </div>
 
-              <div className='flex flex-col pb-3'><input type="email" placeholder='Email' className='w-full texting text-base bg-black text-gray-500' />
+              <div className='flex flex-col pb-3'><input type="email" placeholder='Email' className='w-full texting fonttt-size bg-black text-gray-500' />
                 <div className='lineone bg-gray-500'></div>
               </div>
-              <div className='flex flex-col pb-4'><textarea   placeholder='Enter Your Queries here' className='w-full text-base texting h-8 bg-black text-gray-500' />
+              <div className='flex flex-col pb-3'><textarea   placeholder='Enter Your Queries here' className='w-full fonttt-size texting h-8 bg-black text-gray-500' />
                 <div className='lineone bg-gray-500'></div>
               </div>
               <div>
-              <button className='pt-2 pb-2 pl-4 pr-5 text-base border-white border-2 hover:opacity-40 texting text-white'>Submit</button>
+              <button className='pt-2 pb-2 pl-4 pr-5 fonttt-size border-white border-2 hover:opacity-40 texting text-white'>Submit</button>
               </div>
             </div>
+
+
           </div>
 
 
           {/* column 4 */}
-          <div className='linegrey w-full flex-col bg-gray-500'></div>
+          <div className=' linegrey w-full flex-col bg-gray-500'></div>
 
           {/* column 5   */}
           <div className='pt-6 h-10  text-center'>
