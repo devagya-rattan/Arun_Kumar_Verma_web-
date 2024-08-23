@@ -84,7 +84,7 @@ function Registration() {
           </button>
         </form>
       </div>
-      <ToastContainer />
+     
     </div>
   );
 }
