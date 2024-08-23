@@ -24,9 +24,10 @@ function App() {
                     <Route  path="/registration" element={<Registration/>}/>
                     <Route  path="/publications" element={<Publications/>}/>
                 </Routes>
+                <Footer />
             </Router>
           
-           <Footer />
+           
       </div>
     </>
   );

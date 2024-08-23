@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+
+
 import { useNavigate } from "react-router-dom";
+
 function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +29,8 @@ function Registration() {
       .catch((error) => {
         console.log(error);
       });
-    // navigate("/login");
+
+ 
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -92,6 +96,7 @@ function Registration() {
           </button>
         </form>
       </div>
+
     </div>
   );
 }
