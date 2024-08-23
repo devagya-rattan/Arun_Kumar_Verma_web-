@@ -1,6 +1,6 @@
 /* font-family: "Roboto Condensed", sans-serif; */
 .footer {
-    height: 500px;
+    height: 800px;
 }
 
 .fonttt-size {
@@ -21,7 +21,7 @@
 /* flex lg:flex-row md:flex-col sm:flex-col */
 
 .list-form {
-    padding-top: 2.5rem
+    padding-top: 20px
         /* 40px */
     ;
     padding-left: 1.75rem
@@ -34,6 +34,7 @@
 
 .padding-copy {
     padding-top: 24px;
+    
 }
 
 .hieght-width {
@@ -55,9 +56,7 @@
     height: 1px;
 }
 
-.hiddden {
-    display: none;
-}
+
 
 .query-form {
     padding-bottom: 0.5rem
@@ -83,15 +82,22 @@
 
 @media (min-width: 1024px) {
     .footer {
-        height: 500px;
+        height: 600px;
+      
 
     }
-
+    .line{
+        height: 1px;
+        background-color: grey;
+    }
+    .padding-copy {
+        margin-top: 44px;
+    }
     .query-form {
         padding-bottom: 0.5rem
             /* 8px */
         ;
-        padding-top: 1.75rem
+        padding-top: 18px
             /* 28px */
         ;
         padding-right: 5rem
@@ -101,9 +107,11 @@
             /* 56px */
         ;
     }
-
+.tagg{
+    margin-top: 1rem;
+}
     .list-form {
-        padding-top: 2.5rem
+        padding-top: 0.5rem
             /* 40px */
         ;
         padding-left: 1.75rem
@@ -116,13 +124,14 @@
 
     .flix-400 {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
 
     }
 
     .heightc3 {
-        height: 288px;
+        height: 350px;
+       
     }
 
 
@@ -130,7 +139,7 @@
         display: flex;
         gap: 110px;
         padding-left: 14px;
-        padding-bottom: 26px;
+        padding-bottom: 16px;
         /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
     }
 
@@ -138,7 +147,7 @@
         display: flex;
         gap: 75px;
         padding-left: 14px;
-        padding-bottom: 26px;
+        padding-bottom: 16px;
         /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
     }
 
@@ -146,7 +155,7 @@
         display: flex;
         gap: 70px;
         padding-left: 11px;
-        padding-bottom: 26px;
+        padding-bottom: 16px;
         /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
     }
 

@@ -28,7 +28,7 @@ function Footer() {
 
           {/* column 3 */}
           <div className="flex  flix-400 text-white w-full heightc3 justify-between items-center md:items-start sm:items-start">
-            <div className=" heightc3  w-3/6 list-form  flex flex-col justify-start">
+            <div className=" heightc3  w-full list-form  flex flex-col justify-start">
               <div className='space-x-containera   '>
                 <Link className='roberto fonttt-size font-normal hover:opacity-40 cursor-pointer texting' to='/'>Home</Link>
                 <Link className='roberto fonttt-size    font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Blog</Link>
@@ -51,14 +51,15 @@ function Footer() {
                 
 
               </div>
+              <div className='line'></div>
 
             </div>
-
+          
             {/* when full screen */}
             <div className="lg:h-full lg:border-l lg:border-gray-400"></div>
 
             {/* when responsive */}
-            <div className='block lg:hidden linegrey w-full flex-col bg-gray-500'></div>
+            <div className='block  linegrey w-full flex-col bg-gray-500'></div>
 
             <div className=" heightc3 w-3/6   query-form flex flex-col justify-start   ">
               <div><p className='texting font-normal fonttt-size pb-4'>If You have any Queries feel free to Ask Here</p></div>
@@ -86,7 +87,7 @@ function Footer() {
 
 
           {/* column 4 */}
-          <div className=' linegrey w-full flex-col bg-gray-500'></div>
+          <div className='tagg linegrey w-full flex-col bg-gray-500'></div>
 
           {/* column 5   */}
           <div className='pt-6 h-10  text-center'>
