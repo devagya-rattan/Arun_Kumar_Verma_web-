@@ -7,7 +7,7 @@ import Publications from './components/Publications/Publications';
 import Blog from './components/Blog/blog';
 import Profile from './components/Profile/Profile';
 import Login from './components/Login/Login';
-import Registeration from './components/Registeration/Registeration'
+import Registration from './components/Registration/Registration'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
                     <Route  path="/blog" element={<Blog/>}/>
                     <Route  path="/login" element={<Login/>}/>
                     <Route  path="/profile" element={<Profile/>}/>
-                    <Route  path="/registeration" element={<Registeration/>}/>
+                    <Route  path="/registration" element={<Registration/>}/>
                     <Route  path="/publications" element={<Publications/>}/>
                 </Routes>
             </Router>
