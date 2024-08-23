@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const postForm = (e) => {
     e.preventDefault();
     axios
@@ -15,12 +16,18 @@ function Registration() {
         password,
       })
       .then((response) => {
+        if (response.data.message === "The user already exists") {
+          alert("User already registered please login");
+          // navigate("/login");
+        } else {
+          alert("Successful registration!");
+        }
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
       });
-    toast.success("Successful registration!");
+    // navigate("/login");
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -86,7 +93,6 @@ function Registration() {
           </button>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 }
