@@ -13,7 +13,7 @@ function Navbar() {
   // Close menu when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (!event.target.closest(".navbar-container")) {
+      if (!event.target.closest(".navbar-container") && !event.target.closest(".mobile-menu")) {
         setIsOpen(false);
       }
     };
@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col">
+      <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative">
         <div className="flex flex-row h-14 justify-between items-center">
           <div className="flex-col">
             <h5 className="timesnowroman lg:text-5xl md:text-4xl text-3xl font-extrabold">
@@ -48,35 +48,35 @@ function Navbar() {
             <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/about">About Me</Link>
           </div>
 
+          {/* Hamburger Icon */}
           <GiHamburgerMenu className="lg:hidden block cursor-pointer" onClick={toggle} />
+        </div>
 
-          {/* Mobile menu */}
-          <div
-            className={`fixed inset-0 top-14 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform duration-300 ease-in-out ${
-              isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
-            }`}
-          >
+        {/* Sidebar Mobile Menu */}
+        <div
+          className={`mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "-translate-x-full"
+          } z-50`}
+        >
+          <div className="flex flex-col items-start p-6 gap-4">
             {/* Mobile Links */}
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
-            </li>
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base pl-2 font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
-            </li>
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base pl-2 font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
-            </li>
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base pl-2 font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
-            </li>
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base pl-2 font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
-            </li>
-            <li className="list-none w-full text-center p-4 cursor-pointer">
-              <Link className="roberto text-base pl-2 font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
-            </li>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
           </div>
         </div>
+
+        {/* Overlay when menu is open */}
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black opacity-50 z-40"
+            onClick={toggle}
+          ></div>
+        )}
+
         <div className="flex-col lineend w-full bg-black"></div>
       </div>
     </>
